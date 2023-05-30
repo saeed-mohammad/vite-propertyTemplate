@@ -1,0 +1,88 @@
+@use "../../global/" as *;
+
+.residency {
+  &__container {
+    overflow: hidden;
+    position: relative;
+  }
+  &__title {
+    > h2 {
+      color: orange;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    > h3 {
+      color: #1f3e72;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+  &__item {
+    max-width: max-content;
+    transition: all 300ms ease-in-out;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+
+    &__img {
+      max-width: 15rem;
+    }
+    &__text {
+      max-width: 15rem;
+      > p:first-child {
+        font-size: 15px;
+      }
+      > h4 {
+        color: #1f3e72;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+      > p:last-child {
+        color: grey;
+        font-size: 12px;
+      }
+    }
+
+    &:hover {
+      scale: 1.025;
+      cursor: pointer;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(136, 160, 255, 0.46) 217.91%
+      );
+      box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+    }
+  }
+  .swiper-horizontal {
+    overflow: visible;
+  }
+}
+// ====r-button
+.r-button {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  right: 0;
+  top: -4rem;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    position: initial;
+  }
+  > button {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(242, 239, 239);
+    }
+  }
+}

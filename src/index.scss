@@ -1,0 +1,80 @@
+@use "./global/" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+#root {
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  width: 80%;
+  margin-inline: auto;
+
+  @media (min-width: 1536px) {
+    width: 1280px;
+    margin: auto;
+  }
+}
+.btn {
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  background: $blue-gradient;
+  color: $white;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.orange {
+  color: orange;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.primary {
+  color: #1f3e72;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.secondary {
+  color: grey;
+  font-size: 12px;
+}
+// ==============App===============
+.App {
+  position: relative;
+  > :first-child {
+    background: $black;
+  }
+  .white-gradient {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(100px);
+    border: 100px;
+  }
+}

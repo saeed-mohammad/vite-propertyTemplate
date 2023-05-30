@@ -1,0 +1,17 @@
+@use "../../global/" as *;
+
+.company {
+  padding: 2rem 0;
+  &__container {
+    @include flex-row();
+    justify-content: space-around;
+    gap: 1rem;
+
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+    }
+    &__img {
+      width: 9rem;
+    }
+  }
+}
